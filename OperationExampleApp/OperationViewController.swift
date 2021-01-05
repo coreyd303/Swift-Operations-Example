@@ -16,7 +16,7 @@ class OperationViewController: UIViewController {
 
         let opTwo = OperationsManagerImplementation.shared.newAnotherOperation(apiService: APIServiceImp())
 
-        opTwo.addDependency(opOne)
+        opTwo.addDependency(opOne)  // this sets the second op as dependent on the completion of the first, so we have control of order of execution
 
         OperationsManagerImplementation.shared.add(operations: [opOne, opTwo])
     }
